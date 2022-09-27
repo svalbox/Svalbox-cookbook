@@ -4,7 +4,7 @@
 format: jb-book
 root: intro
 parts:
-  - caption: Data access/
+  - caption: Data access & QCing policy
     chapters:
     - file: notes/read-access
     - file: notes/svalbox_bookkeeping

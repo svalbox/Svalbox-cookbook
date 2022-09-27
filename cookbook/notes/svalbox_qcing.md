@@ -3,9 +3,9 @@
 Prior to submission of data to the curated Svalbox databases, several steps need to be gone through.
 These include:
 
-- Data inspection and processing (*processed* checkbox)
-- Quality control and metadata extraction (*qced* checkbox)
-- Submission to Svalbox (*uploaded_to_db* checkbox)
+- Data inspection and processing (*processed* checkbox in SBL)
+- Quality control and metadata extraction (*qced* checkbox in SBL)
+- Submission to Svalbox (*uploaded_to_db* checkbox in SBL)
 
 The respective checkboxes should only be checked once the steps have been completed.
 Keep in mind that this is not a linear progression - if the quality control step shows that more processing is needed, the *processed* checkbox will likely be set to *False* once more.
