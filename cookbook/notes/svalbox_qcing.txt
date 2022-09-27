@@ -1,0 +1,75 @@
+# Svalbox quality check
+
+edeting an qualety of bookkeeping layer.
+Qualety essurens of the svalbox metadata
+
+## eddeting of the bookkeeping layer
+finde a pint that you want to uppdate.
+
+```{figure} ../assets/oppen_bookkeeping_atributes.gif
+---
+height: 600px
+name: oppen_bookkeeping_atributes
+---
+accessing the atributes of a layer, editing the attributes, and saving the layer.
+```
+
+Remember to save changes that have been made.
+Once done, make sure to exit the editing mode my clicking the pencil icon once more.
+
+## QCing to do list
+
+Three steps for Svalbox uploading are:
+
+- Processing (*processed*)
+- Qualety controll (*qced*)
+- Submission (*uploaded_to_db*)
+
+### Processing 
+
+Data should be processed acording to standardized protocols. 
+
+````{tab-set}
+```{tab-item} Structure-from-Motion
+[Geo-SfM guidelines and tutorial](https://unisvalbard.github.io/Geo-SfM/content/lessons/l1/tutorial.html)
+```
+
+```{tab-item} Something else
+My second tab with `some code`!
+```
+````
+
+### Quality control
+
+#### Structure-from-motion data
+
+##### datapackage requirements
+
+- One model per prodject 
+- Followed the file structure 
+- Input material only for this prodject 
+- Can you identify people? If so prosess again. 
+- Processing report, both html and pdf
+- Max files size 50 gigabytes, if more contact admin. 
+- Package must include exported model
+
+##### Model requirements
+
+- One chunk
+- One deth map 
+- One dense cloud
+- One 3D model with textures  
+
+The following are optinal
+- Tiled model
+- Orthomosaic 	
+- DEM 
+ 
+```{warning}
+Do not include annotations, back up prodject and remove. 
+```
+ 
+
+##### metadata 
+
+- For each datapackage a metadata file needs to be filled out 
