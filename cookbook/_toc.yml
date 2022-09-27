@@ -3,6 +3,8 @@
 
 format: jb-book
 root: intro
-chapters:
-- file: svalbox_bookkeeping
-
+parts:
+  - caption: Data access
+    chapters:
+    - file: read-access
+    - file: svalbox_bookkeeping

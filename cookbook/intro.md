@@ -1,4 +1,4 @@
-# Welcome to the Svalbox-Cookbook!
+# Intro to cooking
 
 This is *THE* place where you can find handy tips and tricks for dealing with the Svalbox database.
 
