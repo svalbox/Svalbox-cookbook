@@ -43,7 +43,7 @@ Accounts can be requested from the UNIS AG GIS admin.
 
 ### PostgreSQL/GIS connection
 
-```{figure} ./assets/arcgis_pro_postgis_connection.gif
+```{figure} ../assets/arcgis_pro_postgis_connection.gif
 ---
 height: 600px
 name: arcgispro_postgis_connection
@@ -54,7 +54,7 @@ please ask the Svalbox admin for the credentials.
 
 ### ArcGIS REST API connection
 
-```{figure} ./assets/arcgis_pro_server_connection.gif
+```{figure} ../assets/arcgis_pro_server_connection.gif
 ---
 height: 600px
 name: arcgispro_server_connection
@@ -67,7 +67,7 @@ please ask the Svalbox admin for the credentials.
 
 ### PostgreSQL/GIS connection
 
-```{figure} ./assets/qgis_postgis_connection.gif
+```{figure} ../assets/qgis_postgis_connection.gif
 ---
 height: 600px
 name: qgis_postgis_connection
@@ -78,7 +78,7 @@ please ask the Svalbox admin for the credentials.
 
 ### ArcGIS REST API connection
 
-```{figure} ./assets/qgis_server_connection.gif
+```{figure} ../assets/qgis_server_connection.gif
 ---
 height: 600px
 name: qgis_server_connection
