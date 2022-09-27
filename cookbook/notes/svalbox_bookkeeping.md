@@ -62,7 +62,26 @@ An example filled out for the hypothetical Longyearbyen data set.
 ```
 
 It is important to frequently save your progress to the SBL table!
-The Svalbox DB takes care of people editing the same data elsewhere, so no need to worry about things..
+
+#### (Post-)Editing of the SBL
+
+You may edit previously created points with the *Bookkeeping_editor* credentials.
+These need to be provided when connecting to the Svalbox PostGIS server as seen in {numref}`postgis_connection`.
+
+{numref}`open_bookkeeping_attributes` illustrates how the attribute table of a feature can be opened in QGIS.
+The animation illustrates the editing of the SBL, which is used to keep track of unpublished Svalbox data.
+
+```{figure} ../assets/open_bookkeeping_attributes.gif
+---
+height: 600px
+name: open_bookkeeping_attributes
+---
+Accessing attributes of a layer, editing the attributes, and saving the layer in QGIS.
+```
+
+Remember to frequently save changes that have been made, while at the same time making sure that only correct revisions have been made.
+Once done, make sure to exit the editing mode my clicking the pencil icon once more, to leave the layer in the much safer *read-only mode*.
+The Svalbox DB takes care of people editing the same data elsewhere, so no need to worry about things.
 
 #### Reporting data sizes
 
@@ -95,4 +114,3 @@ Make sure you keep the metadata in the SBL tables up to date...
 Exported a model or removed some photos?
 Then it is important to recheck the folder size while checking the processed/QC boxes.
 `````
-=======
