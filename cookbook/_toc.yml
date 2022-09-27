@@ -6,5 +6,18 @@ root: intro
 parts:
   - caption: Data access
     chapters:
-    - file: read-access
-    - file: svalbox_bookkeeping
+    - file: notes/read-access
+    - file: notes/svalbox_bookkeeping
+  - caption: Structure-from-Motion Tutorial
+    chapters:
+    - url: https://unisvalbard.github.io/Geo-SfM/landing-page.html
+      title: Geo-SfM
+  - caption: GIS Tutorials
+    chapters:
+    - url: https://unisvalbard.github.io/AG222/landing-page.html
+      title: AG222 Compendium/GIS 101
+    - file: notes/merginmaps
+      title: MerginMaps/Data in the field
+  - caption: About
+    chapters:
+    - file: notes/references.md

@@ -1,3 +1,4 @@
+(Svlbx:read_access)=
 # Read-access to Svalbox resources
 
 Access to the Svalbox resources is provided through multiple ways, not all of which possible beyond the UNIS network.
