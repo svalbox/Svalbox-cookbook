@@ -62,3 +62,34 @@ An example filled out for the hypothetical Longyearbyen data set.
 It is important to frequently save your progress to the SBL table!
 The Svalbox DB takes care of people editing the same data elsewhere, so no need to worry about things..
 
+#### Reporting data sizes
+
+{numref}`Check_file_size` shows how to get the folder size in windows.
+The SBL requires the folder size to be filled out in GB.
+
+```{figure} ../assets/Check_file_size.gif
+---
+height: 600px
+name: Check_file_size
+---
+Checking folder size in windows.
+```
+
+This is the number of bytes highlighted in {numref}`Check_file_size`, which you divide by 1 000 000 000, and then round up.
+An example of this for the Gipshuken dataset is shown in {numref}`Folder_file_size_example`.
+
+```{figure} ../assets/Folder_file_size_example.png
+---
+height: 450px
+name: Folder_file_size_example
+---
+Write down folder size.
+
+```
+
+`````{admonition} Keep the SBL updated
+:class: tip
+Make sure you keep the metadata in the SBL tables up to date...
+Exported a model or removed some photos?
+Then it is important to recheck the folder size while checking the processed/QC boxes.
+`````
