@@ -37,13 +37,13 @@ The easiest way is to connect to the SBL table by connecting to the Svalbox Post
 The connection uses a limited-access account called *Bookkeeping_writer*, which only has write access to the SBL table.
 A password is provided for those that need access, and can be found ine Svalbox Password Manager (bitwarden).
 
-```{figure} ./assets/postgis_connection_svalbox.gif
+```{figure} ../assets/postgis_connection_svalbox.gif
 ---
 height: 600px
 name: postgis_connection
 ---
-Connecting to the Svalbox DB. 
-The *bookkeeping_writer* account is used for editing of the SBL table; 
+Connecting to the Svalbox DB.
+The *bookkeeping_writer* account is used for editing of the SBL table;
 please ask the Svalbox admin for the password.
 ```
 
@@ -51,7 +51,7 @@ After adding the layer to your QGIS project, you may proceed with the editing of
 {numref}`svalbox_edit_bookkeeping_layer` visualises the workflow for this.
 Keep in mind that the table's attributes (see {ref}`SBL:metadata`) may change over time, so think before just copying the example!
 
-```{figure} ./assets/svalbox_edit_bookkeeping_layer.gif
+```{figure} ../assets/svalbox_edit_bookkeeping_layer.gif
 ---
 height: 600px
 name: svalbox_edit_bookkeeping_layer
@@ -61,4 +61,3 @@ An example filled out for the hypothetical Longyearbyen data set.
 
 It is important to frequently save your progress to the SBL table!
 The Svalbox DB takes care of people editing the same data elsewhere, so no need to worry about things..
-
