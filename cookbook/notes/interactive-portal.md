@@ -36,15 +36,15 @@ Example of zooming in and out and panning across the interactive map.
 Located at the top-left corner of the interactive portal is the layer pane. This feature allows you to easily switch and visualize various map layers. The layers available include a variety of datasets stored in the [Svalbox file database](../html/notes/read-access.html), as well as other open databases such as the one provided by the [Norwegian Polar Institute](https://data.npolar.no/dataset).
 The layers available to date are:
 - Norwegian Polar Institute - satellite
-- Norwegian Polar Institute - geology
+- [Norwegian Polar Institute - geology](#geology)
 - Norwegian Polar Institute - basemap
 - Seimic
 - Sedimentary logs
-- Drone footage
-- Photo spheres
+- Drone footage 
+- [Photo spheres](#photo-spheres))
 - Boreholes
 - [Virtual outcrop Models](#virtual-outcrop-models)
-- Virtual Field Guides
+- [Virtual Field Guides](#virtual-field-guides)
 
 ```{figure} ../assets/map_layers.gif
 :name: map_layers
@@ -90,28 +90,103 @@ When searching with a filter option, remember to click "Apply filter".
 Example of Virtual Outcrop Models search based on the Land the models are located in Svalbard.
 ```
 
-## Virtual Outcrop Models
+## Map Layers
+By clicking the different objects in the map layers, a pop-up with all the information will open in the uper-right corner of the interactive portal. Some of them are linked to other repositories where the data is stored.
 
-```{admonition} TODO
-:class: note
-Section to develop
+### Geology
+The Svalbox interactive map includes a digital geological map of Svalbard, which is provided by the [Norwegian Polar Institute](https://www.npolar.no/).
+The map uses a stratigraphic classification system to divide the geology into groups, subgroups, and formations, depending on the appropriate scale. In areas where formations are not defined, lithological units are used instead. The map is accurate to a scale of 1:250000.
+
+```{figure} ../assets/geology.gif
+:name: geology
+
+Click on the DOI link related to the selected geological layer. A new tab will open linking to the [Norwegian Polar Data Centre](https://data.npolar.no/dataset), from where you can download the Geological map of Svalbard (1:250000) amongst other data.
 ```
 
+### Photo spheres
 ````{margin}
 ```{admonition} Zenodo
 :class: tip
 
-[Zenodo](https://zenodo.org) serves as an open repository, providing a platform for researchers across diverse disciplines to freely share and safeguard their research outputs, irrespective of size or format. This general-purpose open-access repository allows researchers to deposit various materials, including research papers, data sets, and research software. For instance, all Virtual Outcrop Models in [Svalbox](http://www.svalbox.no/map) are uploaded to Zenodo, ensuring free access to the data and facilitating its long-term citability, shareability, and discoverability within the scientific community.
+[Zenodo](https://zenodo.org) serves as an open repository, providing a platform for researchers across diverse disciplines to freely share and safeguard their research outputs, irrespective of size or format. This general-purpose open-access repository allows researchers to deposit various materials, including research papers, data sets, and research software. For instance, all Virtual Outcrop Models and Photo spheres in the [Svalbox database](http://www.svalbox.no/map) are uploaded to Zenodo, ensuring free access to the data and facilitating its long-term citability, shareability, and discoverability within the scientific community.
 ```
 ````
 
+One of the main assets of the Svalbox interactive map is an incredible collection of photo spheres. These are aerial drone 360-degree panoramic images that cover various locations across the archipelago. They are a very useful resource to get an overview of a wan area.
 
-You can download all the information related to the Digital Terrain Models uploaded in [Svalbox](http://www.svalbox.no/outcrops/) from the [Zenodo](https://zenodo.org/) database.
+```{admonition} Qualitative data
+:class: important
+While photo spheres are very useful, they only provide qualitative data. Do not base any measurements on them since they result from stitching a series of images together, interpolating, and distorting them to give the 360° visual effect.
+```
 
-The files needed to plot the models in ArcGIS Pro are in the *export.zip* folder.
+```{figure} ../assets/photospheres.gif
+:name: photospheres
 
-```{figure} ../assets/download_zenodo.gif
-:name: download_zenodo
+When you click on a photo sphere, a pop-up will appear on the top-right corner of the interactive portal. Press _Click to Load Panorama_ to visualize the image in 360°.
+```
+
+The DOI link above the photo sphere connects to a [Zenodo](https://zenodo.org) repository where you can find all the photo spheres collected by the Svalbox Team over a natural year in various acquisition campaigns. It's important to keep in mind that there are multiple versions available for each dataset. We recommend using the latest version to ensure access to the most updated data.
+
+```{figure} ../assets/photospheres_doi.gif
+:name: photospheres_doi
+
+Accessing the [Zenodo](https://zenodo.org) repository where the dataset for the 2022-photo spheres have been uploaded.
+```
+
+### Virtual Outcrop Models
+
+Virtual Outcrop Models (VOMs) or Digital Outcrop Models (DOMs) are three-dimensional representations of geological outcrops. They are created by integrating images using a structure-from-motion workflow. These models are a powerful tool for gaining insights into geological structures, sedimentary patterns, and stratigraphic relationships. They enhance the accessibility and visualization of geological information, facilitating more accurate and detailed geological interpretations.
+
+They are the main asset of the Svalbox database, which gathers hundreds of models from all over the Svalbard archipelago.
+
+To visualize the VOMs in 3D, they are uploaded in [Sketchfab](https://sketchfab.com/feed).
+
+```{admonition} Sketchfab
+:class: note
+For more information on uploading Virtual Outcrop Models to Sketchfab, click [here](https://unisvalbard.github.io/Geo-SfM/content/lessons/l6/sketchfab.html).
+```
+```{figure} ../assets/dom_visualize.gif
+:name: dom_visualize
+
+Click on the Svalbox or Sketchfab icons on the left-hand side of the model visualizer. A new tab will open, linking to the Svalbox models uploaded onto [Sketchfab](https://zenodo.org/), a platform that enables you to explore and visualize the 3D models with ease.
+```
+You can download all the information related to the VOMs uploaded in [Svalbox](http://www.svalbox.no/outcrops/) from the [Zenodo](https://zenodo.org/) database.
+
+Each VOM is uploaded as a single dataset containing all files related to the model:
+- Configuration file: Contains all the metadata related to the model.
+- Metashape folder: Includes the Agisoft metashape project and the processing reports.
+- Data folder: Contains all the raw data used in the model.
+- Export folder: With all the object and texture files.
+- Image overview.
+
+Each VOM has a unique DOI, making it easy to find and cite.
+
+```{figure} ../assets/dom_zenodo.gif
+:name: dom_zenodo
 
 Click on the DOI link of the model. A new tab will open linking to the [Zenodo](https://zenodo.org/) database, from where you can download all the data.
 ```
+
+### Virtual Field Guides
+````{margin}
+```{admonition} VR Svalbard
+:class: tip
+
+[VR Svalbard](https://vrsvalbard.com/) is an online platform that provides a unique opportunity to explore the breathtaking landscapes of Svalbard using desktop virtual reality (VR) technology. This project uses high-quality drone photospheres to offer users a bird's-eye view of Svalbard's stunning terrain. These photospheres are integrated as virtual tours into a webGIS service that includes map layers and digital outcrop models (DOM). By utilizing the immersive power of desktop VR and the unique perspective of drone photography, VR Svalbard presents a remarkable virtual tour experience of this Arctic region.
+```
+````
+
+A Virtual Field Guide (VFG) is an interactive digital resource that enables you to explore geological sites and formations without being physically present. 
+
+To access the VFGs in the Svalbox interactive map, you 
+
+```{figure} ../assets/vfg.gif
+:name: vfg
+
+Click on the Virtual Field Guide and explore the different localities of the field trip by clicking to the icons that appear on the screen.
+```
+
+While Svalbox offers a few VFGs, [VR Svalbard](https://vrsvalbard.com/) has extensively developed this resource, enhancing its functionality and features.
+
+
+

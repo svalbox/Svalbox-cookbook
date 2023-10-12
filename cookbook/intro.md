@@ -10,9 +10,15 @@ name: the_svalbox_concept
 The Svalbox concept as outlined by {cite:t}`sengerDigitisingSvalbardGeology2022`.
 ```
 
+```{admonition} Contribute
+:class: seealso
 Right now only a view tutorials exist, but this will increase over time :).
 
 Fancy a tutorial on a specific topic? Why not contribute?
+```
+
+## Table of contents
+This CookBook contains the following information:
 
 ```{tableofcontents}
 ```
