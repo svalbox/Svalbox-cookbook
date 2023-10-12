@@ -41,7 +41,7 @@ The layers available to date are:
 - Seimic
 - Sedimentary logs
 - Drone footage 
-- [Photo spheres](#photo-spheres))
+- [Photo spheres](#photo-spheres)
 - Boreholes
 - [Virtual outcrop Models](#virtual-outcrop-models)
 - [Virtual Field Guides](#virtual-field-guides)
