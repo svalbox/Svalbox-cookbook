@@ -4,11 +4,18 @@
 format: jb-book
 root: intro
 parts:
+  - caption: Navigating online resources
+    chapters:
+    - file: notes/interactive-portal
   - caption: Data access & QCing policy
     chapters:
     - file: notes/read-access
     - file: notes/svalbox_bookkeeping
     - file: notes/svalbox_qcing
+  - caption: UAV-based Data Acquisition Tutorial
+    chapters:
+    - url: https://unisvalbard.github.io/Geo-UAV/landing-page.html
+      title: Geo-UAV
   - caption: Structure-from-Motion Tutorial
     chapters:
     - url: https://unisvalbard.github.io/Geo-SfM/landing-page.html

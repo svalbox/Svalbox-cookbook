@@ -1,6 +1,6 @@
 # Intro to cooking
 
-This is *THE* place where you can find handy tips and tricks for dealing with the Svalbox database.
+This is *THE* place where you can find handy tips and tricks to navigate the [Svalbox online map](http://www.svalbox.no/map) and dealing with the Svalbox database.
 
 ```{figure} https://www.earthdoc.org/docserver/fulltext/fb/40/3/fb2022021-09.gif
 ---
