@@ -11,7 +11,7 @@ http://www.svalbox.no/map
 ```{figure} ../assets/svalbox_idex.png
 :name: svalbox_idex
 
-Landing portal of the Svalbox interactive map.
+Landing portal of the Svalbox interactive map. 2023 version.
 ```
 
 ### Key Features
@@ -24,7 +24,7 @@ The Svalbox's interactive map is designed to provide users with a comprehensive 
 ## Getting Started
 ### Navigating the Map
 
-Use the *scroll wheel* on your mouse to zoom in and out on the map. Left-click to your mouse to move around the map.
+To zoom in or out on the map, use the scroll wheel on your mouse. Alternatively, you can click on the plus and minus icons located on the left side of the screen. To move around the map, simply left-click your mouse.
 
 ```{figure} ../assets/zooming.gif
 :name: zooming
@@ -33,18 +33,18 @@ Example of zooming in and out and panning across the interactive map.
 ```
 
 ### Changing Map Layers
-Located at the top-left corner of the interactive portal is the layer pane. This feature allows you to easily switch and visualize various map layers. The layers available include a variety of datasets stored in the [Svalbox file database](../html/notes/read-access.html), as well as other open databases such as the one provided by the [Norwegian Polar Institute](https://data.npolar.no/dataset).
+Located at the top-left corner of the interactive portal is the layer pane. This feature allows you to easily switch and visualize various map layers. The layers available include a variety of datasets stored in the Svalbox file database, as well as other open databases such as the one provided by the [Norwegian Polar Institute](https://data.npolar.no/dataset).
 The layers available to date are:
 - Norwegian Polar Institute - satellite
-- [Norwegian Polar Institute - geology](#geology)
+- Norwegian Polar Institute - geology
 - Norwegian Polar Institute - basemap
 - Seimic
 - Sedimentary logs
 - Drone footage 
-- [Photo spheres](#photo-spheres)
+- Photo spheres
 - Boreholes
-- [Virtual outcrop Models](#virtual-outcrop-models)
-- [Virtual Field Guides](#virtual-field-guides)
+- Virtual outcrop Models
+- Virtual Field Guides
 
 ```{figure} ../assets/map_layers.gif
 :name: map_layers
@@ -176,9 +176,9 @@ Click on the DOI link of the model. A new tab will open linking to the [Zenodo](
 ```
 ````
 
-A Virtual Field Guide (VFG) is an interactive digital resource that enables you to explore geological sites and formations without being physically present. 
+A Virtual Field Guide (VFG) is an interactive digital resource that enables you to explore geological sites and formations without being physically present.
 
-To access the VFGs in the Svalbox interactive map, you 
+The Svalbox interactive map includes multiple VFGs focused on geology (displayed as purple hexagons) and biology (displayed as green hexagons).
 
 ```{figure} ../assets/vfg.gif
 :name: vfg
@@ -186,7 +186,7 @@ To access the VFGs in the Svalbox interactive map, you
 Click on the Virtual Field Guide and explore the different localities of the field trip by clicking to the icons that appear on the screen.
 ```
 
-While Svalbox offers a few VFGs, [VR Svalbard](https://vrsvalbard.com/) has extensively developed this resource, enhancing its functionality and features.
+While Svalbox offers a few VFGs, [VR Svalbard](https://vrsvalbard.com/) has extensively developed this resource for geological VFG, enhancing its functionality and features. [Learning Arctic Biology](https://learningarcticbiology.info/360/vfg/map/), has also developed multiple biological VFGs mainly targeting Arctic flora.
 
 
 
