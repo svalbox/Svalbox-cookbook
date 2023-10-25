@@ -22,5 +22,5 @@ https://merginmaps.com/docs/tutorials/mobile/
 ```{figure} ../assets/mergin.png
 :name: mergin
 
-Field data collection and integration with QGIS and Mergin Maps. {cite:p}`martin_dobias_2022_6376045` [Image source](https://septima.dk/images/kurser/kurt-bog-illustration-09.png)
+Field data collection and integration with QGIS and Mergin Maps {cite:p}`martin_dobias_2022_6376045`. [Image source](https://septima.dk/images/kurser/kurt-bog-illustration-09.png)
 ```
