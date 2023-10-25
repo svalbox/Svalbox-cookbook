@@ -8,7 +8,7 @@ There are, however, several other apps that can be used for the same purpose.
 
 ## MerginMaps App
 
-Proceed by downloading the **MerginMaps** app on your smarthphone or tablet.
+Proceed by downloading the **MerginMaps** {cite:p}`martin_dobias_2022_6376045` app on your smarthphone or tablet.
 Once installed, proceed to the **My Projects** page, which should be empty still.
 Instead of being shown the projects, you will be prompted to login.
 Use the credentials provided to you in class, or send the Admin a message to receive *Read-only* access to the Svalbox resources.
@@ -22,5 +22,5 @@ https://merginmaps.com/docs/tutorials/mobile/
 ```{figure} ../assets/mergin.png
 :name: mergin
 
-Field data collection and integration with QGIS and Mergin Maps. [Image source](https://www.google.com/url?sa=i&url=https%3A%2F%2Fseptima.dk%2Fkurser%2FData-Collection-with-QGIS-Input-and-Mergin-september2022-online&psig=AOvVaw0EMW3yJQVz8_0iMHmIAnow&ust=1697270349093000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCIiJlvPG8oEDFQAAAAAdAAAAABAE)
+Field data collection and integration with QGIS and Mergin Maps. {cite:p}`martin_dobias_2022_6376045` [Image source](https://septima.dk/images/kurser/kurt-bog-illustration-09.png)
 ```
