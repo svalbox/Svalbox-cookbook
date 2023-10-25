@@ -12,7 +12,7 @@ Keep in mind that this is not a linear progression - if the quality control step
 The SBL is regularly checked for data sets that have been submitted to Svalbox.
 Said data are automatically removed from the SBL following archiving.
 
-### Processing
+## Processing
 
 Various guidelines have been established for the standardized processing of data sets.
 Data type-specific tutorials are linked to below.
@@ -27,7 +27,7 @@ TBD.
 ```
 ````
 
-### Quality control
+## Quality control
 
 The quality control check is needed for quality assurance and standardisation of the data prior to submission to Svalbox.
 Both the data and the metadata need to follow established guidelines.

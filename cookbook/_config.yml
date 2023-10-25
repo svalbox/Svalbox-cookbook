@@ -2,7 +2,7 @@
 # Learn more at https://jupyterbook.org/customize/config.html
 
 title: The Svalbox Cookbook
-author: Peter Betlem // Team Svalbox
+author: Peter Betlem, Nil Rodes, Svalbox Team
 logo: ./assets/logo.gif
 
 # Force re-execution of notebooks on each build.
