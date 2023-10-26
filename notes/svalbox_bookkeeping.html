@@ -1,0 +1,636 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Svalbox Bookkeeping &#8212; The Svalbox Cookbook</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=c5ced968eda925caa686" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=c5ced968eda925caa686" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=c5ced968eda925caa686"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notes/svalbox_bookkeeping';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Svalbox quality control check-list" href="svalbox_qcing.html" />
+    <link rel="prev" title="Read-access to Svalbox resources" href="read-access.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.gif" class="logo__image only-light" alt="The Svalbox Cookbook - Home"/>
+    <script>document.write(`<img src="../_static/logo.gif" class="logo__image only-dark" alt="The Svalbox Cookbook - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Intro to cooking
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Navigating online resources</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="interactive-portal.html">The Svalbox Interactive Map</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Data access &amp; QCing policy</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="read-access.html">Read-access to Svalbox resources</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Svalbox Bookkeeping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="svalbox_qcing.html">Svalbox quality control check-list</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">UAV-based Data Acquisition Tutorial</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://unisvalbard.github.io/Geo-UAV/landing-page.html">Geo-UAV</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Structure-from-Motion Tutorial</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://unisvalbard.github.io/Geo-SfM/landing-page.html">Geo-SfM</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">GIS Tutorials</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://unisvalbard.github.io/AG222/landing-page.html">AG222 Compendium/GIS 101</a></li>
+<li class="toctree-l1"><a class="reference internal" href="merginmaps.html">MerginMaps/Data in the field</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">About</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="references.html">Bibliography</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/svalbox/Svalbox-cookbook" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/svalbox/Svalbox-cookbook/issues/new?title=Issue%20on%20page%20%2Fnotes/svalbox_bookkeeping.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/notes/svalbox_bookkeeping.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Svalbox Bookkeeping</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-contribute-to-the-svalbox-bookkeeping-layer-sbl">How to contribute to the Svalbox Bookkeeping Layer (SBL)?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#required-sbl-metadata">Required SBL metadata</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-github-way">The Github way</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-qgis-way">The QGIS way</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#post-editing-of-the-sbl">(Post-)Editing of the SBL</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#reporting-data-sizes">Reporting data sizes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="svalbox-bookkeeping">
+<h1>Svalbox Bookkeeping<a class="headerlink" href="#svalbox-bookkeeping" title="Permalink to this heading">#</a></h1>
+<p>Keeping track of data is as important as the data themselves.
+For this reason we have established a basic bookkeeping layer in the Svalbox database.
+The goal? Keeping track of data acquired in the field - as well as their temporary storage location!</p>
+<section id="how-to-contribute-to-the-svalbox-bookkeeping-layer-sbl">
+<h2>How to contribute to the Svalbox Bookkeeping Layer (SBL)?<a class="headerlink" href="#how-to-contribute-to-the-svalbox-bookkeeping-layer-sbl" title="Permalink to this heading">#</a></h2>
+<p>The Svalbox Boookeeping Layer (SBL) is accessible through the Svalbox PostGIS backend and frontends that can connect to the PostGIS server.
+Perhaps the easiest and most straight forward way is to use <a class="reference external" href="https://www.qgis.org/en/site/forusers/download.html">QGIS</a>, which we illustrate below.
+In practice, however, any software connecting to the SBL with the right credentials can edit the table, so go with your best flow :).</p>
+<section id="required-sbl-metadata">
+<span id="sbl-metadata"></span><h3>Required SBL metadata<a class="headerlink" href="#required-sbl-metadata" title="Permalink to this heading">#</a></h3>
+<p>The following metadata are required for the SBL table:</p>
+<ul class="simple">
+<li><p><strong>name</strong>: Locality name of where the data was acquired</p></li>
+<li><p><strong>uri</strong>: Unique identifier for the data; for DOMs this is typically the SketchFab ID. This field may be in a list form, using the “;” (semicolon) to separate entries.</p></li>
+<li><p><strong>file_location</strong>: The location where to find the raw data; preferably in file path on the Svalbox server. Remember that this is useable not just for you, but to all those looking for the data!</p></li>
+<li><p><strong>data_type</strong>: Pick the data type; examples include DOM, DCM, DSM (digital sample model), image_360, video_360, etc.</p></li>
+<li><p><strong>processed</strong>: Tick if this data has been processed/is ready for QCing and uploading.</p></li>
+<li><p><strong>QCed</strong>: Tick if this data has been QCed and is ready for uploading. This includes not only the data quality assurance, but also compilation of all relevant metadata.</p></li>
+<li><p><strong>uploaded_to_DB</strong>: Tick if the data has been uploaded to the Svalbox Database. Ticked data will be removed at regular intervals.</p></li>
+<li><p><strong>declined</strong>: Tick if the data has been declined for uploading/processing/Qcing.</p></li>
+<li><p><strong>folder_size_in_gb</strong>: Size of the item/data set in GB.</p></li>
+<li><p><strong>geom</strong>: Point geometry of where the data was acquired, filled out automatically if picked in QGIS.</p></li>
+<li><p><strong>id</strong>: unique identifier of the data; filled out automatically by QGIS.</p></li>
+</ul>
+<p>Seeing as these are all required prior to publishing, make sure to have these lists handy!</p>
+</section>
+<section id="the-github-way">
+<h3>The Github way<a class="headerlink" href="#the-github-way" title="Permalink to this heading">#</a></h3>
+<p>To be done - information on posting of all datasets on the Github Svalbox discussion pages for referencing.</p>
+</section>
+<section id="the-qgis-way">
+<h3>The QGIS way<a class="headerlink" href="#the-qgis-way" title="Permalink to this heading">#</a></h3>
+<p>The easiest way is to connect to the SBL table by connecting to the Svalbox PostGIS server, see <a class="reference internal" href="#postgis-connection"><span class="std std-numref">Fig. 17</span></a>.
+The connection uses a limited-access account called <em>Bookkeeping_writer</em>, which only has write access to the SBL table.
+A password is provided for those that need access, and can be found ine Svalbox Password Manager (bitwarden).</p>
+<figure class="align-default" id="postgis-connection">
+<a class="reference internal image-reference" href="../_images/postgis_connection_svalbox.gif"><img alt="../_images/postgis_connection_svalbox.gif" src="../_images/postgis_connection_svalbox.gif" style="height: 600px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 17 </span><span class="caption-text">Connecting to the Svalbox DB.
+The <em>bookkeeping_writer</em> account is used for editing of the SBL table;
+please ask the Svalbox admin for the password.</span><a class="headerlink" href="#postgis-connection" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>After adding the layer to your QGIS project, you may proceed with the editing of the SBL table.
+<a class="reference internal" href="#svalbox-edit-bookkeeping-layer"><span class="std std-numref">Fig. 18</span></a> visualises the workflow for this.
+Keep in mind that the table’s attributes (see <a class="reference internal" href="#sbl-metadata"><span class="std std-ref">Required SBL metadata</span></a>) may change over time, so think before just copying the example!</p>
+<figure class="align-default" id="svalbox-edit-bookkeeping-layer">
+<a class="reference internal image-reference" href="../_images/svalbox_edit_bookkeeping_layer.gif"><img alt="../_images/svalbox_edit_bookkeeping_layer.gif" src="../_images/svalbox_edit_bookkeeping_layer.gif" style="height: 600px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 18 </span><span class="caption-text">An example filled out for the hypothetical Longyearbyen data set.</span><a class="headerlink" href="#svalbox-edit-bookkeeping-layer" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>It is important to frequently save your progress to the SBL table!</p>
+<section id="post-editing-of-the-sbl">
+<h4>(Post-)Editing of the SBL<a class="headerlink" href="#post-editing-of-the-sbl" title="Permalink to this heading">#</a></h4>
+<p>You may edit previously created points with the <em>Bookkeeping_editor</em> credentials.
+These need to be provided when connecting to the Svalbox PostGIS server as seen in <a class="reference internal" href="#postgis-connection"><span class="std std-numref">Fig. 17</span></a>.</p>
+<p><a class="reference internal" href="#open-bookkeeping-attributes"><span class="std std-numref">Fig. 19</span></a> illustrates how the attribute table of a feature can be opened in QGIS.
+The animation illustrates the editing of the SBL, which is used to keep track of unpublished Svalbox data.</p>
+<figure class="align-default" id="open-bookkeeping-attributes">
+<a class="reference internal image-reference" href="../_images/open_bookkeeping_attributes.gif"><img alt="../_images/open_bookkeeping_attributes.gif" src="../_images/open_bookkeeping_attributes.gif" style="height: 600px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 19 </span><span class="caption-text">Accessing attributes of a layer, editing the attributes, and saving the layer in QGIS.</span><a class="headerlink" href="#open-bookkeeping-attributes" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Remember to frequently save changes that have been made, while at the same time making sure that only correct revisions have been made.
+Once done, make sure to exit the editing mode my clicking the pencil icon once more, to leave the layer in the much safer <em>read-only mode</em>.
+The Svalbox DB takes care of people editing the same data elsewhere, so no need to worry about things.</p>
+</section>
+<section id="reporting-data-sizes">
+<h4>Reporting data sizes<a class="headerlink" href="#reporting-data-sizes" title="Permalink to this heading">#</a></h4>
+<p><a class="reference internal" href="#check-file-size"><span class="std std-numref">Fig. 20</span></a> shows how to get the folder size in windows.
+The SBL requires the folder size to be filled out in GB.</p>
+<figure class="align-default" id="check-file-size">
+<a class="reference internal image-reference" href="../_images/Check_file_size.gif"><img alt="../_images/Check_file_size.gif" src="../_images/Check_file_size.gif" style="height: 600px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 20 </span><span class="caption-text">Checking folder size in windows.</span><a class="headerlink" href="#check-file-size" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>This is the number of bytes highlighted in <a class="reference internal" href="#check-file-size"><span class="std std-numref">Fig. 20</span></a>, which you divide by 1 000 000 000, and then round up.
+An example of this for the Gipshuken dataset is shown in <a class="reference internal" href="#folder-file-size-example"><span class="std std-numref">Fig. 21</span></a>.</p>
+<figure class="align-default" id="folder-file-size-example">
+<a class="reference internal image-reference" href="assets/Folder_file_size_example.png"><img alt="assets/Folder_file_size_example.png" src="assets/Folder_file_size_example.png" style="height: 450px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 21 </span><span class="caption-text">Write down folder size.</span><a class="headerlink" href="#folder-file-size-example" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="tip admonition">
+<p class="admonition-title">Keep the SBL updated</p>
+<p>Make sure you keep the metadata in the SBL tables up to date…
+Exported a model or removed some photos?
+Then it is important to recheck the folder size while checking the processed/QC boxes.</p>
+</div>
+</section>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./notes"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="read-access.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Read-access to Svalbox resources</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="svalbox_qcing.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Svalbox quality control check-list</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-contribute-to-the-svalbox-bookkeeping-layer-sbl">How to contribute to the Svalbox Bookkeeping Layer (SBL)?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#required-sbl-metadata">Required SBL metadata</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-github-way">The Github way</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-qgis-way">The QGIS way</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#post-editing-of-the-sbl">(Post-)Editing of the SBL</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#reporting-data-sizes">Reporting data sizes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Peter Betlem, Nil Rodes, Svalbox Team
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=c5ced968eda925caa686"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=c5ced968eda925caa686"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
